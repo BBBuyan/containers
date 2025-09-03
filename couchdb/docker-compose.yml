@@ -9,6 +9,7 @@ services:
     environment:
       - COUCHDB_USER=admin
       - COUCHDB_PASSWORD=secret
+      - COUCHDB_SECRET=dbsecret
       - NODENAME=shardx
       - ERL_FLAGS=-setcookie "brumbrum"
     volumes:
