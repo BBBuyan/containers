@@ -8,6 +8,7 @@ services:
       - node.roles=${NODE_ROLES}
       - discovery.seed_hosts=${VM1_IP},${VM2_IP}
       - xpack.security.enabled=false
+      - network.host=0.0.0.0
       # - cluster.initial_master_nodes=es-node-1,es-node-2,es-node-3
     volumes:
       - es_data:/usr/share/elasticsearch/data
