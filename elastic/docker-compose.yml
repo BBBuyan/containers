@@ -3,7 +3,7 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.19.3
     container_name: es
     environment:
-      - cluster.name=${CLUSTER_NAME}
+      - cluster.name=docker-cluster
       - node.name=es-node-${NODE_ID}
       - node.roles=${NODE_ROLES}
       - discoveres.seed_hosts=${VM1_IP},${VM2_IP}
