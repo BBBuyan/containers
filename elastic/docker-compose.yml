@@ -8,7 +8,7 @@ services:
       - node.roles=${NODE_ROLES}
       - discoveres.seed_hosts=${VM1_IP},${VM2_IP}
       - xpack.security.enabled=false
-      # - cluster.initial_master_nodes=es-node1,es-node2,es-node3
+      # - cluster.initial_master_nodes=es-node-1,es-node-2,es-node-3
     volumes:
       - es_data:/usr/share/elasticsearch/data
     ports:
