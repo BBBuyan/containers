@@ -11,7 +11,14 @@ services:
       - COUCHDB_PASSWORD=secret
     volumes:
       - couchdb_data:/opt/couchdb/data
+    networks:
+      - couch_alone_net
 
 volumes:
   couchdb_data:
     name: couchdb_data
+
+networks:
+  couch_alone_net:
+    name: couch_alone_net
+    driver: bridge

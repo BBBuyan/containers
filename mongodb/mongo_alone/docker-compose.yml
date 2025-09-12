@@ -1,6 +1,6 @@
 services:
   mongo:
-    image: mongo:latest
+    image: mongo:8.0.13
     container_name: mongo
     ports:
       - "27017:27017"
@@ -8,8 +8,16 @@ services:
       - mongo_conf:/data/configdb
       - mongo_db:/data/db
 
+    networks:
+      - mongo_alone_net
+
 volumes:
   mongo_conf:
     name: mongo_conf
   mongo_db:
     name: mongo_db
+
+networks:
+  mongo_alone_net:
+    name: mongo_alone_net
+    driver: bridge
