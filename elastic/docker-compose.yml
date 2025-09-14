@@ -16,8 +16,14 @@ services:
     ports:
       - 9200:9200
       - 9300:9300
+    networks:
+      - es_net
 
 volumes:
   es_data:
     name: es_data
 
+networks:
+  es_net:
+    name: es_net
+    driver: bridge
