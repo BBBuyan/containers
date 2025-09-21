@@ -1,0 +1,11 @@
+services:
+  mongorouter:
+    image: mongo
+    container_name: router
+    ports:
+      - "27017:27017"
+    command: >
+      mongos --configdb confSet/${CONFIG_1},${CONFIG_2},${CONFIG_3}
+             --bind_ip_all
+             --port 27017
+
