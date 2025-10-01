@@ -7,6 +7,7 @@ services:
     volumes:
       - mongo_conf:/data/configdb
       - mongo_db:/data/db
+      - ./deep_data:/deep_data
 
     networks:
       - mongo_alone_net
